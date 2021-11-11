@@ -1,1 +1,1 @@
-web: python app/app.py
+web: uvicorn app.server.app:app
