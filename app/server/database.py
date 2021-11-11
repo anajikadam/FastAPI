@@ -1,9 +1,13 @@
 import motor.motor_asyncio
 
 from bson.objectid import ObjectId
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+conn = os.getenv("conn")
 
-MONGO_DETAILS = "mongodb://anaji_091121:fjvhHGCPgAMY9nT6@cluster1-shard-00-00.zwyx0.mongodb.net:27017,cluster1-shard-00-01.zwyx0.mongodb.net:27017,cluster1-shard-00-02.zwyx0.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-mualzv-shard-0&authSource=admin&retryWrites=true&w=majority"
+MONGO_DETAILS = conn
 # "mongodb://localhost:27017"
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
