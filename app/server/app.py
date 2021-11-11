@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 
-from server.routes.student import router as StudentRouter
+from app.server.routes.student import router as StudentRouter
 
 app = FastAPI()
 
